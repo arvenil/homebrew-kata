@@ -2,16 +2,16 @@
 class Kata < Formula
   desc "Kata 形🤺 exercises"
   homepage "https://github.com/arvenil/kata"
-  version "0.1.5"
+  version "1.0.0"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/arvenil/kata/releases/download/v0.1.5/kata_0.1.5_Darwin_x86_64.tar.gz"
-    sha256 "bf03e5747a23ab70ca1c871ef5c4041dbb6be9d67d537dede900e4a43dfdabd9"
+    url "https://github.com/arvenil/kata/releases/download/v1.0.0/kata_1.0.0_Darwin_x86_64.tar.gz"
+    sha256 "1ead7cec3d6194d858f1f615334a3023a2899503797ef119d8ac89e5476e2688"
   elsif OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/arvenil/kata/releases/download/v0.1.5/kata_0.1.5_Linux_x86_64.tar.gz"
-      sha256 "130fda408e9863a5a8fad0b05b71e54174a32a50923d3e33f7eeb819d44ef70b"
+      url "https://github.com/arvenil/kata/releases/download/v1.0.0/kata_1.0.0_Linux_x86_64.tar.gz"
+      sha256 "1010d05ab45216285a32a0620de26f4c787a4b8a533f8dff91415428dce6c79b"
     end
   end
 
