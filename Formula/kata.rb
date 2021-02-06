@@ -10,15 +10,15 @@ class Kata < Formula
 
   if OS.mac?
     url "https://github.com/arvenil/kata/releases/download/v1.0.1/kata_1.0.1_Darwin_x86_64.tar.gz"
-    sha256 "03b1f8275b3936c5ff45f23a9d579b0e740b591d0a9200bfd6d49bbb82e16e6f"
+    sha256 "44e9cb6c9842733c92a4b7e6dcd95042e92d1700b7ae16175e37930adb64d840"
   end
   if OS.linux? && Hardware::CPU.intel?
     url "https://github.com/arvenil/kata/releases/download/v1.0.1/kata_1.0.1_Linux_x86_64.tar.gz"
-    sha256 "e8dea841e8f2991307ea6cbf82b434b4a6467c9575697db586aaaa5c9562d413"
+    sha256 "a5a1d84c36534676b348df6be26ea4ea3ead611bdd7a4a8d1f2000db71b36def"
   end
   if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
     url "https://github.com/arvenil/kata/releases/download/v1.0.1/kata_1.0.1_Linux_arm64.tar.gz"
-    sha256 "a9f90bf2727d04d6c64a19d87af1090959901d64559eea27c64d860501a73afd"
+    sha256 "b45fee78c1bf2930fbc2c4f44966de782b0e5eb97ca0d6c6e8aa0c7f8e18e5d5"
   end
 
   def install
