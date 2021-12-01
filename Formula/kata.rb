@@ -5,12 +5,12 @@
 class Kata < Formula
   desc "Kata 形🤺 exercises"
   homepage "https://github.com/arvenil/kata"
-  version "1.1.1"
+  version "1.1.2"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/arvenil/kata/releases/download/v1.1.1/kata_1.1.1_Darwin_arm64.tar.gz"
-      sha256 "598563119909d0e1b51f1547879e40b188f95dcd407d9af0305a3abcfa8a23f6"
+      url "https://github.com/arvenil/kata/releases/download/v1.1.2/kata_1.1.2_Darwin_arm64.tar.gz"
+      sha256 "0cd7286d17dcf7ace12da87e4e1eab52a392e3eb11bd37490fc6d76100e74f4e"
 
       def install
         bin.install "bsearch"
@@ -18,8 +18,8 @@ class Kata < Formula
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/arvenil/kata/releases/download/v1.1.1/kata_1.1.1_Darwin_x86_64.tar.gz"
-      sha256 "35fbc596f4644ffc578a67394d533768750f1377a4e5ea9990088a8930fa2856"
+      url "https://github.com/arvenil/kata/releases/download/v1.1.2/kata_1.1.2_Darwin_x86_64.tar.gz"
+      sha256 "13428d3027adc275e39f4c219c665e652d5a0fbda561e7d99320240dbb46aa5f"
 
       def install
         bin.install "bsearch"
@@ -30,8 +30,8 @@ class Kata < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/arvenil/kata/releases/download/v1.1.1/kata_1.1.1_Linux_arm64.tar.gz"
-      sha256 "ffa18628e1cffcc72100f3d99c5a6a48ad6573de699b8d77d440f8d8e01b7996"
+      url "https://github.com/arvenil/kata/releases/download/v1.1.2/kata_1.1.2_Linux_arm64.tar.gz"
+      sha256 "5ead3c7336caa0d76d3c41f497735a9afe4cbce8b78a3c38aeafc00baee79685"
 
       def install
         bin.install "bsearch"
@@ -39,8 +39,8 @@ class Kata < Formula
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/arvenil/kata/releases/download/v1.1.1/kata_1.1.1_Linux_x86_64.tar.gz"
-      sha256 "7f8e860d211fc43607d4982c5ba922c414f81eeef096b38264638a8566303e19"
+      url "https://github.com/arvenil/kata/releases/download/v1.1.2/kata_1.1.2_Linux_x86_64.tar.gz"
+      sha256 "1dde2e62305ea34248c72094d8d31bda3a663fc8c31674bfb9e174cdc833ce7e"
 
       def install
         bin.install "bsearch"
