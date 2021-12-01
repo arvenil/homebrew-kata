@@ -5,12 +5,12 @@
 class Kata < Formula
   desc "Kata 形🤺 exercises"
   homepage "https://github.com/arvenil/kata"
-  version "1.1.2"
+  version "1.1.3"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/arvenil/kata/releases/download/v1.1.2/kata_1.1.2_Darwin_arm64.tar.gz"
-      sha256 "0cd7286d17dcf7ace12da87e4e1eab52a392e3eb11bd37490fc6d76100e74f4e"
+      url "https://github.com/arvenil/kata/releases/download/v1.1.3/kata_1.1.3_Darwin_arm64.tar.gz"
+      sha256 "86e0bf20be1a946a70711515403b01842776ac1f5f77230490d0ab66879ada32"
 
       def install
         bin.install "bsearch"
@@ -18,8 +18,8 @@ class Kata < Formula
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/arvenil/kata/releases/download/v1.1.2/kata_1.1.2_Darwin_x86_64.tar.gz"
-      sha256 "13428d3027adc275e39f4c219c665e652d5a0fbda561e7d99320240dbb46aa5f"
+      url "https://github.com/arvenil/kata/releases/download/v1.1.3/kata_1.1.3_Darwin_x86_64.tar.gz"
+      sha256 "1cb058183cbae6baf13d08bebfa09c74cba4a843b23db6dd43139648bc69968c"
 
       def install
         bin.install "bsearch"
@@ -29,18 +29,18 @@ class Kata < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/arvenil/kata/releases/download/v1.1.2/kata_1.1.2_Linux_arm64.tar.gz"
-      sha256 "5ead3c7336caa0d76d3c41f497735a9afe4cbce8b78a3c38aeafc00baee79685"
+    if Hardware::CPU.intel?
+      url "https://github.com/arvenil/kata/releases/download/v1.1.3/kata_1.1.3_Linux_x86_64.tar.gz"
+      sha256 "961c76dc7d20436ed10899fe02ab319c3392e11ea2eaf7e0b78e3f205ccc6380"
 
       def install
         bin.install "bsearch"
         bin.install "ladder"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/arvenil/kata/releases/download/v1.1.2/kata_1.1.2_Linux_x86_64.tar.gz"
-      sha256 "1dde2e62305ea34248c72094d8d31bda3a663fc8c31674bfb9e174cdc833ce7e"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/arvenil/kata/releases/download/v1.1.3/kata_1.1.3_Linux_arm64.tar.gz"
+      sha256 "3057b6364638576510350a6ca4a4c7e9e3b2014b24681aea273d3259c043cf11"
 
       def install
         bin.install "bsearch"
