@@ -5,21 +5,12 @@
 class Kata < Formula
   desc "Kata 形🤺 exercises"
   homepage "https://github.com/arvenil/kata"
-  version "1.1.3"
+  version "1.1.6"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/arvenil/kata/releases/download/v1.1.3/kata_1.1.3_Darwin_arm64.tar.gz"
-      sha256 "86e0bf20be1a946a70711515403b01842776ac1f5f77230490d0ab66879ada32"
-
-      def install
-        bin.install "bsearch"
-        bin.install "ladder"
-      end
-    end
     if Hardware::CPU.intel?
-      url "https://github.com/arvenil/kata/releases/download/v1.1.3/kata_1.1.3_Darwin_x86_64.tar.gz"
-      sha256 "1cb058183cbae6baf13d08bebfa09c74cba4a843b23db6dd43139648bc69968c"
+      url "https://github.com/arvenil/kata/releases/download/v1.1.6/kata_1.1.6_Darwin_x86_64.tar.gz"
+      sha256 "74b69ef43bd512d87849b707c278777af32df99a6ebc6800fe155c7088bf032c"
 
       def install
         bin.install "bsearch"
@@ -29,18 +20,18 @@ class Kata < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/arvenil/kata/releases/download/v1.1.3/kata_1.1.3_Linux_x86_64.tar.gz"
-      sha256 "961c76dc7d20436ed10899fe02ab319c3392e11ea2eaf7e0b78e3f205ccc6380"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/arvenil/kata/releases/download/v1.1.6/kata_1.1.6_Linux_arm64.tar.gz"
+      sha256 "5bb895c70ccc5f12758c15df24d2b1579af8127a75f7776176a9d4232f5b6a53"
 
       def install
         bin.install "bsearch"
         bin.install "ladder"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/arvenil/kata/releases/download/v1.1.3/kata_1.1.3_Linux_arm64.tar.gz"
-      sha256 "3057b6364638576510350a6ca4a4c7e9e3b2014b24681aea273d3259c043cf11"
+    if Hardware::CPU.intel?
+      url "https://github.com/arvenil/kata/releases/download/v1.1.6/kata_1.1.6_Linux_x86_64.tar.gz"
+      sha256 "d6208bfa636bb62816d31390bf3d25402deea0372f6b9020968f0afd3c0e2a02"
 
       def install
         bin.install "bsearch"
